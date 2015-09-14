@@ -46,8 +46,6 @@ gem 'spring',        group: :development
 
 group :test do
   gem "rspec-rails", "~> 2.14"
-  gem "factory_girl_rails"
-  gem 'ffaker'
   gem "shoulda-matchers"
 end
 
@@ -58,4 +56,10 @@ gem 'compass-rails', '1.1.7'
 gem 'furatto'
 gem 'font-awesome-rails'
 gem 'simple_form'
+
+group :development, :test do
+  gem "factory_girl_rails"
+  gem 'ffaker'
+end
+
 
