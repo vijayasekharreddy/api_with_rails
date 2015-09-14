@@ -2,11 +2,6 @@ require 'spec_helper'
 
 describe Api::V1::UsersController do
 
-  # we concatenate the json format
-  before(:each) { request.headers['Accept'] = "application/vnd.marketplace.v1, #{Mime::JSON}" }
-  # now we added this line
-  before(:each) { request.headers['Content-Type'] = Mime::JSON.to_s }
-
   describe "GET #show" do
     before(:each) do
       @user = FactoryGirl.create :user
